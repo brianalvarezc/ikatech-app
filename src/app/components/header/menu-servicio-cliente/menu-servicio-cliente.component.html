@@ -1,0 +1,7 @@
+<div class="enlaces-servicio-cliente">
+    <ul>
+        <li *ngFor="let link of links">
+            <a routerLink="/{{ link.href }}">{{ link.text }}</a>
+        </li>
+    </ul>
+</div>

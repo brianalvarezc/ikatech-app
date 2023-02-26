@@ -1,0 +1,17 @@
+.enlaces-servicio-cliente {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: inline-flex;
+        a {
+            text-decoration: none;
+            color: #878786;
+            font-weight: bold;
+            margin: 0px 10px;
+        }
+    }
+    padding-right: 20px;
+    text-align: right;
+    background-color: #c9c6ca;
+}

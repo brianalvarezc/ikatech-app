@@ -1,6 +1,41 @@
-<ul>
-    <li><a routerLink="/home">home</a></li>
-    <li><a routerLink="/category/him">him</a></li>
-    <li><a routerLink="/category/her">her</a></li>
-    <li><a routerLink="/product">product</a></li>
-</ul>
+<div class="border-bajo">
+    <div class="row">
+        <div class="col text-center">
+            <app-avisos-top></app-avisos-top>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <app-menu-servicio-cliente></app-menu-servicio-cliente>
+        </div>
+    </div>
+    <!-- contenedor de menús, logo, buscador, carrito y avisos 2 -->
+    <div class="row">
+        <div class="col">
+            <div class="row mx-3">
+                <div class="col-sm-3">
+                    <app-logo></app-logo>
+                </div>
+                <!-- div espacio en blanco -->
+                <div class="col-sm-4"></div>
+
+                <div class="col-sm-5">
+                    <div class="row">
+                        <app-buscador></app-buscador>
+                    </div>
+                    <div class="row text-end">
+                        <app-avisos-middle></app-avisos-middle>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-3">
+                <div class="col-sm-10">
+                    <app-menu-tienda></app-menu-tienda>
+                </div>
+                <div class="col-sm-2">
+                    <app-carrito></app-carrito>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
