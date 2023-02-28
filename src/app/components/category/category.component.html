@@ -1,1 +1,87 @@
-<p>category works!</p>
+<div class="row mx-3">
+    <div class="col-sm-3">
+        <div class="row">
+            <div class="col-sm">
+                <span class="route">HUSHPUPPIES/CALZADO</span>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm">
+                <span class="title">
+                    CALZADO
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <span class="todos">
+                    TODOS (51)
+                </span>
+            </div>
+        </div>
+        <br>
+        <div class="row borde px-3">
+            <div class="col-sm"><br>
+                <span class="talla mt-3">
+                    TALLA
+                </span>
+                <div class="row my-3">
+                    <div class="col-sm text-start">
+                        <button *ngFor="let talla of tallas" class="talla_btn">{{ talla }}</button>
+                    </div>
+                </div>
+                <div class="row my-3" *ngFor="let filtro of filtros">
+                    <div class="col-sm">
+                        <span class="talla">
+                            {{ filtro.title }} <br>
+                        </span>
+                        <span *ngFor="let condition of filtro.conditions">
+                            {{ condition.text }} ({{ condition.count }}) <br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div class="row">
+            <div class="col-sm-3">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: 14px; color: rgb(109, 99, 99);">
+                    ORDENAR POR
+                </span>
+                <br>
+                <br>
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: 14px; color: rgb(109, 99, 99);">
+                    FECHA DE LANAZMIENTO
+                </span>
+            </div>
+            <div class="col-sm-6"></div>
+            <div class="col-sm-3">
+                <span style="font-family: 'Times New Roman', Times, serif; font-size: 14px; color: rgb(109, 99, 99);">
+                    ARTÍCULOS POR PÁGINA
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <br>
+            <div class="col-sm grilla">
+                <div class="producto text-center" *ngFor="let zapato of zapatos.data, index as i" style="border-bottom: #383938;">
+                    <a routerLink="/producto/{{ zapato['referencia'] }}">
+                        <img src="./assets/img/{{zapato['foto']}}" alt="{{ zapato['nombre'] }}">
+                    </a>
+                    <br>
+                    <span>
+                        <b>{{ zapato["referencia"] }}</b>
+                    </span><br>
+                    <span>
+                        {{ zapato["nombre"] }}
+                    </span><br>
+                    <span>
+                        {{ zapato["precio"] | currency: 'COP '}}
+                    </span><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

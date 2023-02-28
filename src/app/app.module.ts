@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,9 @@ import { BlogComponent } from './components/blog/blog.component';
 import { HistoryComponent } from './components/history/history.component';
 import { StoresComponent } from './components/stores/stores.component';
 import { SearchComponent } from './components/search/search.component';
+import { CarouselComponent } from './components/home/carousel/carousel.component';
+import { NewsletterComponent } from './components/footer/newsletter/newsletter.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -50,11 +54,15 @@ import { SearchComponent } from './components/search/search.component';
     BlogComponent,
     HistoryComponent,
     StoresComponent,
-    SearchComponent
+    SearchComponent,
+    CarouselComponent,
+    NewsletterComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

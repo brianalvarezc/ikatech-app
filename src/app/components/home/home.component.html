@@ -1,1 +1,44 @@
-<p>home works!</p>
+<div class="relativ">
+    <img [src]="large_image.src" [alt]="large_image.alt" width="100%">
+    <img [src]="shop_now.src" [alt]="shop_now.alt" width="100%" class="button-over-large">
+</div>
+<div class="row my-3"></div> 
+<div class="row my-3">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5" style="position: relative;">
+        <img [src]="him_img.src" [alt]="him_img.alt" width="100%">
+        <img [src]="him_btn.src" [alt]="him_btn.alt" width="100%" class="button-over">
+    </div>
+    <div class="col-sm-5" style="position: relative;">
+        <img [src]="her_img.src" [alt]="her_img.alt" width="100%">
+        <img [src]="her_btn.src" [alt]="her_btn.alt" width="100%" class="button-over">
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div class="row my-3"></div> 
+<div class="row my-3">
+    <div class="col">
+        <img [src]="move_disc_img.src" [alt]="move_disc_img.alt" width="100%"> 
+    </div>
+</div>
+<div class="row my-3"></div> 
+<div class="row m-3">
+    <div class="col-sm-6" style="position: relative;">
+        <img [src]="dog.src" [alt]="dog.alt" width="100%">
+        <img [src]="dog_btn.src" [alt]="dog_btn.alt" width="100%" class="button-over-accesorios">
+    </div>
+    <div class="col-sm-6" style="position: relative;">
+        <img [src]="categories.src" [alt]="categories.alt" width="100%">
+        <img [src]="mujer_btn.src" [alt]="mujer_btn.alt" width="100%" class="button-over-mujer">
+        <img [src]="hombre_btn.src" [alt]="hombre_btn.alt" width="100%" class="button-over-hombre">
+    </div>
+</div>
+<div class="row"></div>
+<div class="row">
+    <a href="https://www.instagram.com/hushpuppies/" class="instagram" target="_blank">
+        <img [src]="instagram.src" [alt]="instagram.alt" style="width: 100%;">
+    </a>
+</div>
+<div class="row mx-3 text-center">
+    <app-carousel></app-carousel>
+</div>

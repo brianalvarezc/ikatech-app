@@ -1,1 +1,63 @@
-<p>product works!</p>
+<div class="row">
+    <div class="col-sm ruta-producto">
+        HUSHPUPPIES/CALZADO/{{ zapato.nombre }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row m-3">
+            <div class="col-sm p-3">
+                <div class="producto text-center" style="border-bottom: 2px solid #97999a;">
+                    <img src="./assets/img/{{zapato.foto || 'logo.png'}}" alt="{{ zapato.nombre }}">
+                    <br>
+                </div>
+                <div class="miniatura" *ngFor="let miniatura of miniaturas, index">
+                    <img src="./assets/img/{{miniatura['foto'] || 'logo.png'}}" (click)="changeImg($event)">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <div class="row">
+            <div class="col-sm">
+                <div class="row">
+                    <div class="col">
+                        <span class="titulo-producto">
+                            {{ zapato.nombre?.toUpperCase() }}
+                        </span>
+                        <span class="precio-large">
+                            {{ zapato.precio | currency: 'COP ' }}
+                        </span>
+                        <span class="referencia">
+                            Cod. de producto {{ zapato.referencia }}
+                        </span>
+                        <br>
+                        <span class="text-title">
+                            COLOR
+                        </span>
+                        <div class="color">
+                            <img src="./assets/img/{{color_ref['foto'] || 'logo.png'}}">
+                        </div>
+                        <br>
+                        <span class="text-title">
+                            TALLA
+                        </span>
+                        <div class="row my-3">
+                            <div class="col-sm-8 text-start">
+                                <button *ngFor="let talla of tallas, index as i" class="talla_btn" [disabled]="i == random_count">
+                                    {{ talla }}
+                                </button>
+                            </div>
+                        </div>
+                        <br>
+                        <span class="text-title">
+                            <a href="#" (click)="size_guide($event)">
+                                GUÍA DE TALLAS
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

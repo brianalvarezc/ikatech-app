@@ -12,9 +12,9 @@ export class LogoComponent {
     src:string,
     alt:string,
   } = {
-    name:"logo",
-    title:"Hush Puppies Company",
-    src:"../../../assets/img/logo.png",
-    alt:"Hush Puppies logo image",
+    name: "logo",
+    title: "Hush Puppies Company",
+    src: "./assets/img/logo.png",
+    alt: "Hush Puppies logo image",
   }
 }

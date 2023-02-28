@@ -1,0 +1,54 @@
+.route {
+    color: #ac9e9e;
+    font-weight: bold;
+}
+
+.title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #5c5353;
+}
+
+.borde {
+    border: 1px solid #a79c9c;
+    border-radius: 2px;
+}
+
+.todos {
+    color: #ac9e9e;
+}
+
+.talla {
+    font-weight: bold;
+}
+
+.talla_btn {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #c8c6ca;
+    background-color: #c8c6ca;
+    color: #383938;
+    font-weight: bold;
+}
+.producto {
+    border-bottom: 1px solid #8b978b !important;
+    margin: 10px;
+    padding: 10px;
+    img {
+        max-height: 130px;
+        object-fit: fill;
+    }
+    &:hover {
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto; 
+    column-gap: 15px;
+    row-gap: 15px;
+}

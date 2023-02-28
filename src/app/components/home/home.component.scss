@@ -1,0 +1,86 @@
+.button-over {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    max-width: 180px;
+    &:hover {
+        transform: translate(-49%, -51%);
+        box-shadow: rgba(40, 46, 56, 0.4) -3px 3px, rgba(88, 84, 110, 0.3) -7px 7px, rgba(38, 37, 56, 0.2) -10px 10px, rgba(98, 46, 240, 0.1) -12px 12px, rgba(240, 46, 170, 0.05) -15px 15px;
+    }
+  }
+
+  .button-over-mujer {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    max-width: 150px;
+    &:hover {
+        transform: translate(-49%, -51%);
+        box-shadow: rgba(40, 46, 56, 0.4) -3px 3px, rgba(88, 84, 110, 0.3) -7px 7px, rgba(38, 37, 56, 0.2) -10px 10px, rgba(98, 46, 240, 0.1) -12px 12px, rgba(240, 46, 170, 0.05) -15px 15px;
+    }
+  }
+
+  .button-over-hombre {
+    position: absolute;
+    top: 94.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    max-width: 150px;
+    &:hover {
+        transform: translate(-49%, -51%);
+        box-shadow: rgba(40, 46, 56, 0.4) -3px 3px, rgba(88, 84, 110, 0.3) -7px 7px, rgba(38, 37, 56, 0.2) -10px 10px, rgba(98, 46, 240, 0.1) -12px 12px, rgba(240, 46, 170, 0.05) -15px 15px;
+    }
+}
+
+.button-over-accesorios {
+    position: absolute;
+    top: 94.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    max-width: 150px;
+    min-width: 150px;
+    &:hover {
+        transform: translate(-49%, -51%);
+        box-shadow: rgba(40, 46, 56, 0.4) -3px 3px, rgba(88, 84, 110, 0.3) -7px 7px, rgba(38, 37, 56, 0.2) -10px 10px, rgba(98, 46, 240, 0.1) -12px 12px, rgba(240, 46, 170, 0.05) -15px 15px;
+    }
+}
+
+.button-over-large {
+    position: absolute;
+    top: 90%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    max-width: 150px;
+    min-width: 150px;
+    &:hover {
+        transform: translate(-49%, -51%);
+        box-shadow: rgba(40, 46, 56, 0.4) -3px 3px, rgba(88, 84, 110, 0.3) -7px 7px, rgba(38, 37, 56, 0.2) -10px 10px, rgba(98, 46, 240, 0.1) -12px 12px, rgba(240, 46, 170, 0.05) -15px 15px;
+    }
+}
+
+.instagram {
+    padding: 10px;
+    max-width: 350px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+    }
+}
+
+.relativ {
+    position: relative;
+}

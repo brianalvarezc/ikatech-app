@@ -1,0 +1,13 @@
+.carousel {
+    flex-direction: row;
+    row-gap: 30px;
+    img {
+        display: inline-flex;
+        height: 170px;
+        width: 170px;
+        margin: 20px 20px;
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    }
+}
