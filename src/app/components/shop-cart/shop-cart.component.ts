@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { Zapato } from 'src/app/classes/Zapato';
+
+import { ShopCartService } from 'src/app/services/shop-cart.service';
 
 @Component({
   selector: 'app-shop-cart',
@@ -7,4 +11,17 @@ import { Component } from '@angular/core';
 })
 export class ShopCartComponent {
 
+  constructor(private shopCartService:ShopCartService){}
+
+  ngOnInit(){
+    this.shopCartService.myCart$.subscribe( cart => {
+      this.cart = cart;
+    });
+  }
+
+  cart:Zapato[] = [new Zapato()];
+
+  emptyCart() {
+    this.shopCartService.empty_cart();
+  }
 }

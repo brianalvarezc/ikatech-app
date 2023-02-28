@@ -1,1 +1,11 @@
-<p>shop-cart works!</p>
+<h1>Carrito de compra</h1>
+<h1>Items:</h1>
+<ul *ngFor="let item of cart">
+    <li>
+        {{ item.nombre }}, {{ item.precio | currency: 'COP ' }}
+    </li>
+</ul>
+
+<button (click)="emptyCart()">
+    Vaciar carrito
+</button>

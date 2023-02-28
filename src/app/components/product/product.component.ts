@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { Zapato } from 'src/app/classes/Zapato';
 
+import { ShopCartService } from 'src/app/services/shop-cart.service';
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -31,11 +33,13 @@ export class ProductComponent implements OnInit {
   random_count:number = Math.floor(Math.random() * 6);
 
   random_button:number = Math.floor(Math.random() * 6);
+
+  cart:Zapato[] = [];
   
   constructor(
     private activatedRoute: ActivatedRoute, 
     private httpClient:HttpClient,
-    private router:Router,
+    private shopCartService:ShopCartService
   ){}
 
   ngOnInit() {
@@ -49,6 +53,7 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnDestroy() {
+
   }
 
   getZapatos(){
@@ -73,6 +78,19 @@ export class ProductComponent implements OnInit {
   size_guide(evento:Event) {
     evento.preventDefault();
     alert("GUIA DE TALLAS");
+  }
+
+  add_to_cart() {
+    if (localStorage.getItem("cart") != null && localStorage.getItem("cart")!.indexOf("[") == 0 ) {
+      let actual_cart = JSON.parse(localStorage.getItem("cart")!);
+      actual_cart.push(this.zapato)
+      localStorage.setItem("cart", JSON.stringify(actual_cart));
+    }
+    else {
+      localStorage.setItem("cart", JSON.stringify(this.cart));
+    }
+
+    this.shopCartService.add_to_cart(this.zapato)
   }
 
 }

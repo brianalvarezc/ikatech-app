@@ -29,6 +29,7 @@ import { SearchComponent } from './components/search/search.component';
 import { CarouselComponent } from './components/home/carousel/carousel.component';
 import { NewsletterComponent } from './components/footer/newsletter/newsletter.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ShopCartService } from './services/shop-cart.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ShopCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
